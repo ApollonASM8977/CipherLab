@@ -1,6 +1,6 @@
-"""
+﻿"""
 Encoders & decoders: Base64, Base32, Hex, Binary, URL, Morse.
-© 2026 Aboubacar Sidick Meite (ApollonIUGB77) — All Rights Reserved.
+Â© 2026 Aboubacar Sidick Meite (ApollonASM8977) â€” All Rights Reserved.
 """
 import base64, binascii, urllib.parse
 
@@ -84,3 +84,4 @@ def morse_decode(text: str, **_) -> dict:
             steps.append({"morse": code, "char": ch})
         result.append(' ')
     return {"output": ''.join(result).strip(), "steps": steps}
+

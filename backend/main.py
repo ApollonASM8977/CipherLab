@@ -1,6 +1,6 @@
-"""
-CipherLab API — FastAPI backend.
-© 2026 Aboubacar Sidick Meite (ApollonIUGB77) — All Rights Reserved.
+﻿"""
+CipherLab API â€” FastAPI backend.
+Â© 2026 Aboubacar Sidick Meite (ApollonASM8977) â€” All Rights Reserved.
 """
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -33,13 +33,13 @@ def list_ciphers():
         {"id":"caesar",       "name":"Caesar",          "category":"classical", "modes":["encrypt","decrypt"], "params":[{"key":"shift","type":"number","default":3,"min":1,"max":25,"label":"Shift"}]},
         {"id":"rot13",        "name":"ROT13",            "category":"classical", "modes":["encrypt"],           "params":[]},
         {"id":"atbash",       "name":"Atbash",           "category":"classical", "modes":["encrypt"],           "params":[]},
-        {"id":"vigenere",     "name":"Vigenère",         "category":"classical", "modes":["encrypt","decrypt"], "params":[{"key":"key","type":"text","default":"SECRET","label":"Keyword"}]},
+        {"id":"vigenere",     "name":"VigenÃ¨re",         "category":"classical", "modes":["encrypt","decrypt"], "params":[{"key":"key","type":"text","default":"SECRET","label":"Keyword"}]},
         {"id":"polysubcipher","name":"PolySubCipher",    "category":"classical", "modes":["encrypt","decrypt"], "params":[]},
         {"id":"rail-fence",   "name":"Rail Fence",       "category":"classical", "modes":["encrypt","decrypt"], "params":[{"key":"rails","type":"number","default":3,"min":2,"max":10,"label":"Rails"}]},
         # Modern
         {"id":"aes-256-gcm",  "name":"AES-256-GCM",     "category":"modern",    "modes":["encrypt","decrypt"], "params":[{"key":"key","type":"key","label":"Key (Base64, 32 bytes)","generate":True}]},
         {"id":"aes-128-cbc",  "name":"AES-128-CBC",     "category":"modern",    "modes":["encrypt","decrypt"], "params":[{"key":"key","type":"key","label":"Key (Base64, 16 bytes)","generate":True}]},
-        {"id":"des-cbc",      "name":"DES-CBC",          "category":"modern",    "modes":["encrypt","decrypt"], "params":[{"key":"key","type":"key","label":"Key (Base64, 8 bytes)","generate":True,"warning":"DES is weak — educational only"}]},
+        {"id":"des-cbc",      "name":"DES-CBC",          "category":"modern",    "modes":["encrypt","decrypt"], "params":[{"key":"key","type":"key","label":"Key (Base64, 8 bytes)","generate":True,"warning":"DES is weak â€” educational only"}]},
         {"id":"3des-cbc",     "name":"3DES-CBC",         "category":"modern",    "modes":["encrypt","decrypt"], "params":[{"key":"key","type":"key","label":"Key (Base64, 24 bytes)","generate":True}]},
         # Asymmetric
         {"id":"rsa-2048",     "name":"RSA-2048",         "category":"asymmetric","modes":["encrypt","decrypt"], "params":[
@@ -98,3 +98,4 @@ def generate_key(body: dict):
         return modern.generate_key(cipher_id)
     except Exception as e:
         raise HTTPException(400, str(e))
+
