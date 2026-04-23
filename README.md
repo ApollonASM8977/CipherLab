@@ -1,4 +1,4 @@
-# ðŸ”¬ CipherLab
+# 🔬 CipherLab
 
 > Full cryptography toolkit — classical ciphers, modern encryption, asymmetric keys & encoders.
 
@@ -20,7 +20,7 @@ Select any cipher, enter your text, configure parameters, and get instant result
 
 ## Features
 
-### âš™ï¸ Classical Ciphers
+### ⚙️ Classical Ciphers
 | Cipher | Description |
 |---|---|
 | Caesar | Shift cipher with configurable offset (1–25) |
@@ -38,12 +38,12 @@ Select any cipher, enter your text, configure parameters, and get instant result
 | DES-CBC | Legacy cipher — educational only |
 | 3DES-CBC | Triple DES with 24-byte key |
 
-### ðŸ”‘ Asymmetric
+### 🔑 Asymmetric
 | Cipher | Description |
 |---|---|
 | RSA-2048 | Key pair generation + OAEP-SHA256 encrypt/decrypt |
 
-### ðŸ”¡ Encoders / Decoders
+### 🔡 Encoders / Decoders
 | Encoder | Description |
 |---|---|
 | Base64 | RFC 4648 standard encoding |
@@ -62,7 +62,7 @@ Select any cipher, enter your text, configure parameters, and get instant result
 - **Auto key generator** — one click to generate a secure random key
 - **RSA key pair generator** — generates 2048-bit PEM key pairs instantly
 - **Step-by-step trace** — see every substitution for classical ciphers
-- **â‡„ Swap** — flip input/output to chain operations
+- **⇄ Swap** — flip input/output to chain operations
 - **Copy** button on every output
 
 ---
