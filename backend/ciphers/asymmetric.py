@@ -1,6 +1,6 @@
-﻿"""
+"""
 RSA-2048 asymmetric encryption.
-Â© 2026 Aboubacar Sidick Meite (ApollonASM8977) â€” All Rights Reserved.
+© 2026 Aboubacar Sidick Meite (ApollonASM8977) — All Rights Reserved.
 """
 import base64
 from cryptography.hazmat.primitives.asymmetric import rsa, padding
@@ -45,6 +45,6 @@ def rsa_decrypt(ciphertext_b64: str, private_key_pem: str) -> dict:
     )
     return {
         "output": pt.decode(),
-        "steps": [{"note": "RSA-2048 OAEP-SHA256 decryption with private key âœ“"}],
+        "steps": [{"note": "RSA-2048 OAEP-SHA256 decryption with private key ✓"}],
     }
 

@@ -1,4 +1,4 @@
-﻿// Â© 2026 Aboubacar Sidick Meite (ApollonASM8977) â€” All Rights Reserved
+// © 2026 Aboubacar Sidick Meite (ApollonASM8977) — All Rights Reserved
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { FlaskConical } from 'lucide-react'
@@ -26,12 +26,12 @@ export default function App() {
       <header className="relative z-10 flex items-center gap-3 px-5 py-3 border-b border-lab-border bg-lab-surface shrink-0">
         <FlaskConical size={20} className="text-lab-green" />
         <h1 className="text-sm font-bold tracking-widest uppercase text-lab-green glow-green">CipherLab</h1>
-        <span className="text-lab-muted text-xs">â€”</span>
+        <span className="text-lab-muted text-xs">—</span>
         <span className="text-lab-muted text-xs">Full Cryptography Toolkit Â· Classical Â· Modern Â· Asymmetric Â· Encoders</span>
         <div className="ml-auto flex items-center gap-3">
-          <span className="text-lab-muted/40 text-xs font-mono">Â© ASM</span>
+          <span className="text-lab-muted/40 text-xs font-mono">© ASM</span>
           {ciphers.length === 0 && (
-            <span className="text-xs text-lab-amber">âš  Backend offline â€” start uvicorn on port 8000</span>
+            <span className="text-xs text-lab-amber">⚠ Backend offline — start uvicorn on port 8000</span>
           )}
           {ciphers.length > 0 && (
             <span className="text-xs text-lab-green">â— {ciphers.length} ciphers loaded</span>

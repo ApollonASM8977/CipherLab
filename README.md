@@ -1,6 +1,6 @@
-﻿# ðŸ”¬ CipherLab
+# ðŸ”¬ CipherLab
 
-> Full cryptography toolkit â€” classical ciphers, modern encryption, asymmetric keys & encoders.
+> Full cryptography toolkit — classical ciphers, modern encryption, asymmetric keys & encoders.
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue?logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi)
@@ -23,19 +23,19 @@ Select any cipher, enter your text, configure parameters, and get instant result
 ### âš™ï¸ Classical Ciphers
 | Cipher | Description |
 |---|---|
-| Caesar | Shift cipher with configurable offset (1â€“25) |
-| ROT13 | Caesar with shift 13 â€” self-inverse |
+| Caesar | Shift cipher with configurable offset (1–25) |
+| ROT13 | Caesar with shift 13 — self-inverse |
 | Atbash | Mirror alphabet substitution |
-| VigenÃ¨re | Keyword-based polyalphabetic cipher |
+| Vigenère | Keyword-based polyalphabetic cipher |
 | PolySubCipher | 2-key alternating substitution (original algorithm) |
 | Rail Fence | Transposition cipher with configurable rails |
 
-### ðŸ”’ Modern Symmetric
+### 🔒 Modern Symmetric
 | Cipher | Description |
 |---|---|
-| AES-256-GCM | Authenticated encryption â€” industry standard |
+| AES-256-GCM | Authenticated encryption — industry standard |
 | AES-128-CBC | AES with 128-bit key in CBC mode |
-| DES-CBC | Legacy cipher â€” educational only |
+| DES-CBC | Legacy cipher — educational only |
 | 3DES-CBC | Triple DES with 24-byte key |
 
 ### ðŸ”‘ Asymmetric
@@ -57,12 +57,12 @@ Select any cipher, enter your text, configure parameters, and get instant result
 
 ## UI Highlights
 
-- **Sidebar** â€” navigate ciphers by category
-- **Mode selector** â€” Encrypt / Decrypt / Encode / Decode
-- **Auto key generator** â€” one click to generate a secure random key
-- **RSA key pair generator** â€” generates 2048-bit PEM key pairs instantly
-- **Step-by-step trace** â€” see every substitution for classical ciphers
-- **â‡„ Swap** â€” flip input/output to chain operations
+- **Sidebar** — navigate ciphers by category
+- **Mode selector** — Encrypt / Decrypt / Encode / Decode
+- **Auto key generator** — one click to generate a secure random key
+- **RSA key pair generator** — generates 2048-bit PEM key pairs instantly
+- **Step-by-step trace** — see every substitution for classical ciphers
+- **â‡„ Swap** — flip input/output to chain operations
 - **Copy** button on every output
 
 ---
@@ -88,7 +88,7 @@ uvicorn main:app --reload --port 8000
 cd frontend
 npm install
 npm run dev
-# â†’ http://localhost:5173
+# ↑ http://localhost:5173
 ```
 
 ---
@@ -97,24 +97,24 @@ npm run dev
 
 ```
 CipherLab/
-â”œâ”€â”€ backend/
-â”‚   â”œâ”€â”€ main.py                  # FastAPI â€” /process, /generate-key, /ciphers
-â”‚   â”œâ”€â”€ requirements.txt
-â”‚   â””â”€â”€ ciphers/
-â”‚       â”œâ”€â”€ classical.py         # Caesar, ROT13, Atbash, VigenÃ¨re, PolySubCipher, Rail Fence
-â”‚       â”œâ”€â”€ modern.py            # AES-256-GCM, AES-128-CBC, DES, 3DES
-â”‚       â”œâ”€â”€ asymmetric.py        # RSA-2048
-â”‚       â””â”€â”€ encoders.py          # Base64, Base32, Hex, Binary, URL, Morse
-â”‚
-â””â”€â”€ frontend/
-    â”œâ”€â”€ src/
-    â”‚   â”œâ”€â”€ App.tsx              # Main shell â€” header + sidebar layout
-    â”‚   â”œâ”€â”€ types.ts             # TypeScript interfaces
-    â”‚   â””â”€â”€ components/
-    â”‚       â”œâ”€â”€ Sidebar.tsx      # Category navigation
-    â”‚       â”œâ”€â”€ CipherPanel.tsx  # Main cipher interface
-    â”‚       â””â”€â”€ StepsView.tsx    # Step-by-step trace display
-    â””â”€â”€ tailwind.config.js
+├── backend/
+│   ├── main.py                  # FastAPI — /process, /generate-key, /ciphers
+│   ├── requirements.txt
+│   └── ciphers/
+│       ├── classical.py         # Caesar, ROT13, Atbash, Vigenère, PolySubCipher, Rail Fence
+│       ├── modern.py            # AES-256-GCM, AES-128-CBC, DES, 3DES
+│       ├── asymmetric.py        # RSA-2048
+│       └── encoders.py          # Base64, Base32, Hex, Binary, URL, Morse
+│
+└── frontend/
+    ├── src/
+    │   ├── App.tsx              # Main shell — header + sidebar layout
+    │   ├── types.ts             # TypeScript interfaces
+    │   └── components/
+    │       ├── Sidebar.tsx      # Category navigation
+    │       ├── CipherPanel.tsx  # Main cipher interface
+    │       └── StepsView.tsx    # Step-by-step trace display
+    └── tailwind.config.js
 ```
 
 ---
@@ -132,23 +132,23 @@ CipherLab/
 
 ## Tech Stack
 
-- **Backend** â€” FastAPI, Python 3.11, Uvicorn
-- **Cryptography** â€” `cryptography` library (AES, DES, RSA)
-- **Classical ciphers** â€” Pure Python
-- **Frontend** â€” React 18, TypeScript, Vite, Tailwind CSS
-- **HTTP** â€” Axios
+- **Backend** — FastAPI, Python 3.11, Uvicorn
+- **Cryptography** — `cryptography` library (AES, DES, RSA)
+- **Classical ciphers** — Pure Python
+- **Frontend** — React 18, TypeScript, Vite, Tailwind CSS
+- **HTTP** — Axios
 
 ---
 
 ## Author
 
-**Aboubacar Sidick Meite** â€” Cybersecurity Student  
+**Aboubacar Sidick Meite** — Cybersecurity Student  
 [GitHub](https://github.com/ApollonASM8977)
 
 ---
 
 ## License
 
-Â© 2026 Aboubacar Sidick Meite â€” All Rights Reserved.  
+© 2026 Aboubacar Sidick Meite — All Rights Reserved.  
 Unauthorized copying or distribution is strictly prohibited.
 

@@ -1,6 +1,6 @@
-﻿"""
+"""
 Classical substitution & transposition ciphers.
-Â© 2026 Aboubacar Sidick Meite (ApollonASM8977) â€” All Rights Reserved.
+© 2026 Aboubacar Sidick Meite (ApollonASM8977) — All Rights Reserved.
 """
 import string
 
@@ -20,7 +20,7 @@ MORSE = {
 MORSE_REV = {v: k for k, v in MORSE.items()}
 
 
-# â”€â”€ Caesar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# ── Caesar ────────────────────────────────────────────────────────────────────
 def caesar(text: str, shift: int, mode: str) -> dict:
     if mode == "decrypt": shift = -shift
     result, steps = [], []
@@ -37,13 +37,13 @@ def caesar(text: str, shift: int, mode: str) -> dict:
     return {"output": "".join(result), "steps": steps}
 
 
-# â”€â”€ ROT13 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# ── ROT13 ─────────────────────────────────────────────────────────────────────
 def rot13(text: str, **_) -> dict:
     r = caesar(text, 13, "encrypt")
     return r
 
 
-# â”€â”€ Atbash â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# ── Atbash ────────────────────────────────────────────────────────────────────
 def atbash(text: str, **_) -> dict:
     result, steps = [], []
     for ch in text:
@@ -58,7 +58,7 @@ def atbash(text: str, **_) -> dict:
     return {"output": "".join(result), "steps": steps}
 
 
-# â”€â”€ VigenÃ¨re â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# ── Vigenère ──────────────────────────────────────────────────────────────────
 def vigenere(text: str, key: str, mode: str) -> dict:
     key = ''.join(c for c in key.lower() if c in ALPHA) or "key"
     result, steps, ki = [], [], 0
@@ -77,7 +77,7 @@ def vigenere(text: str, key: str, mode: str) -> dict:
     return {"output": "".join(result), "steps": steps}
 
 
-# â”€â”€ PolySubCipher (original) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# ── PolySubCipher (original) ──────────────────────────────────────────────────
 def polysubcipher(text: str, mode: str) -> dict:
     enc_keys = {1: POLY_KEY_A, 2: POLY_KEY_A, 3: POLY_KEY_B, 4: POLY_KEY_A}
     dec_keys = {1: POLY_DEC_A, 2: POLY_DEC_A, 3: POLY_DEC_B, 4: POLY_DEC_A}
@@ -98,7 +98,7 @@ def polysubcipher(text: str, mode: str) -> dict:
     return {"output": "".join(result), "steps": steps}
 
 
-# â”€â”€ Rail Fence â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# ── Rail Fence ────────────────────────────────────────────────────────────────
 def rail_fence(text: str, rails: int, mode: str) -> dict:
     if rails < 2: rails = 2
     if mode == "encrypt":
